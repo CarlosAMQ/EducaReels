@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EducaReels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>EducaReels</h1>
+
+  <!-- Menú principal -->
+  <div id="menu" class="menu">
+    <button class="button scrum-btn" onclick="showScrum()">SCRUM</button>
+    <button class="button pmbook-btn" onclick="showPmBook()">PmBook</button>
+  </div>
+
+  <!-- Scrum -->
+  <div id="scrumPage" class="main-container">
+    <button class="hamburger" onclick="toggleSidebar('scrumSidebar')">☰</button>
+    <div id="scrumSidebar" class="sidebar">
+      <button onclick="goBack()">⬅ Volver</button>
+      <button onclick="scrollToSection('scrumSec1')">Sección 1: Introducción</button>
+      <button onclick="scrollToSection('scrumSec2')">Sección 2: ¿Qué es Scrum?</button>
+    </div>
+    <div class="content">
+      <div id="scrumSec1" class="section">
+        <h2>Sección 1: Introducción a Scrum</h2>
+        <p>En este video conocerás qué es Scrum y su importancia en la gestión ágil de proyectos.</p>
+        <video controls src="..."></video>
+      </div>
+      <div id="scrumSec2" class="section">
+        <h2>Sección 2: ¿Qué es Scrum?</h2>
+        <p>Explora los conceptos, principios y valores que definen Scrum como metodología.</p>
+        <video controls src="..."></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- PmBook -->
+  <div id="pmbookPage" class="main-container">
+    <button class="hamburger" onclick="toggleSidebar('pmbookSidebar')">☰</button>
+    <div id="pmbookSidebar" class="sidebar">
+      <button onclick="goBack()">⬅ Volver</button>
+      <button onclick="scrollToSection('pmbookSec1')">Sección 1: Introducción</button>
+    </div>
+    <div class="content">
+      <div id="pmbookSec1" class="section">
+        <h2>Sección 1: Introducción a PmBook</h2>
+        <p>Descubre la guía base de buenas prácticas para la gestión de proyectos según PMI.</p>
+        <video controls src="..."></video>
+      </div>
+    </div>
+    <div class="content">
+      <div id="pmbookSec1" class="section">
+        <h2>Sección 2: Introducción a PmBook</h2>
+        <p>Descubre la guía base de buenas prácticas para la gestión de proyectos según PMI.</p>
+        <video controls src="..."></video>
+      </div>
+    </div>
+  </div>
+
+  <script src="preguntas.js"></script>
+</body>
+</html>
