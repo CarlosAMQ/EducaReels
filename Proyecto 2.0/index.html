@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reels Metodologías</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>EducaReels</h1>
+  <div class="reels-container">
+
+
+<div class="reel" data-index="0">
+        <div class="video-wrapper">
+      <video muted autoplay loop playsinline>
+        <source src="/Videos/SCRUM.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+      <div class="overlay-text">🌟 SCRUM</div>
+      <div class="caption">🎥 Reel #1 - SCRUM</div>
+    </div>
+    </div>
+    <div class="reel" data-index="1">
+        <div class="video-wrapper">
+      <video muted autoplay loop playsinline>
+        <source src="/Videos/Kanban.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+      <div class="overlay-text">🌟 Kanban</div>
+      <div class="caption">🎬 Reel #2 - Kanban</div>
+      </div>
+    </div>
+    <!-- Puedes duplicar este bloque para agregar más reels -->
+    <div class="reel" data-index="2">
+      <div class="video-wrapper">
+    <video muted autoplay loop playsinline>
+      <source src="/Videos/Lean.mp4" type="video/mp4" />
+      Tu navegador no soporta el video.
+    </video>
+    <div class="overlay-text">🌟 Lean</div>
+    <div class="caption">🎬 Reel #3 - Lean</div>
+    </div>
+  </div>
+
+  <div class="reel" data-index="3">
+    <div class="video-wrapper">
+  <video muted autoplay loop playsinline>
+    <source src="/Videos/Design Thinking.mp4" type="video/mp4" />
+    Tu navegador no soporta el video.
+  </video>
+  <div class="overlay-text">🌟 Design Thinking</div>
+  <div class="caption">🎬 Reel #4 - Design Thinking</div>
+  </div>
+</div>
+
+<div class="reel" data-index="4">
+  <div class="video-wrapper">
+<video muted autoplay loop playsinline>
+  <source src="/Videos/XP.mp4" type="video/mp4" />
+  Tu navegador no soporta el video.
+</video>
+<div class="overlay-text">🌟 XP</div>
+<div class="caption">🎬 Reel #5 - XP</div>
+</div>
+</div>
+
+<div class="reel" data-index="5">
+  <div class="video-wrapper">
+<video muted autoplay loop playsinline>
+  <source src="/Videos/Waterfall.mp4" type="video/mp4" />
+  Tu navegador no soporta el video.
+</video>
+<div class="overlay-text">🌟 Waterfall</div>
+<div class="caption">🎬 Reel #6 - Waterfall</div>
+</div>
+</div>
+
+
+  </div>
+    <!-- Sección de video individual y preguntas -->
+<div id="player-section" style="display: none;">
+  <div style="display: flex; gap: 20px; align-items: flex-start;">
+    <!-- Video principal -->
+    <div id="video-left" style="flex: 1;">
+      <video id="main-video" controls autoplay>
+        <source id="video-source" src="" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+
+    <!-- Panel de preguntas -->
+    <div id="question-panel" style="flex: 1;">
+      <div id="question-text" style="margin-bottom: 20px; font-size: 18px;"></div>
+      <div id="answer-buttons"></div>
+    </div>
+  </div>
+
+  <!-- Botón de regreso -->
+  <button onclick="backToMenu()" style="margin-top: 20px;">🔙 Regresar al menú</button>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

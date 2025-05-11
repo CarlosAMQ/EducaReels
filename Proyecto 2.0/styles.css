@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reels-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.reel {
+  background-color: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.reel:hover {
+  transform: scale(1.03);
+}
+
+/* Estilo de relación 16:9 para reels */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background-color: black;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.caption {
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .caption {
+    font-size: 12px;
+  }
+
+  #question-text {
+    font-size: 16px;
+  }
+
+  #answer-buttons button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* Estilo del video principal en la sección de reproducción */
+#main-video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+#video-left {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: relative; /* CORREGIDO: necesario para que funcione la lluvia de imágenes */
+}
+
+/* Botones de respuesta */
+#answer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#answer-buttons button {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#answer-buttons button:hover {
+  background-color: #555;
+}
+
+/* Botón "Regresar al menú" */
+button[onclick="backToMenu()"] {
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[onclick="backToMenu()"]:hover {
+  background-color: #666;
+}
+
+.floating-image {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  animation: fall 1.5s linear forwards;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    transform: translateY(-20px) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(400px) rotate(360deg);
+  }
+}
+
+#player-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#main-video {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  #player-section > div {
+    flex-direction: column;
+  }
+
+  #video-left,
+  #question-panel {
+    width: 100%;
+    padding: 0;
+  }
+
+  #main-video {
+    max-width: 100%;
+    max-height: 50vh;
+  }
+}
